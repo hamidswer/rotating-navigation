@@ -1,0 +1,349 @@
+/* ===================================================================== */
+/* ===============================Font/Text============================= */
+* {
+  margin: 0rem;
+  padding: 0rem;
+  border: 0rem;
+}
+
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url("../Fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url("../Fonts/Poppins/Poppins-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("../Fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+}
+
+a {
+  text-decoration: none;
+  color: #919191;
+}
+
+a:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: #616161;
+}
+
+a.button {
+  font-size: 1.5rem;
+  font-family: "Poppins-Medium";
+  display: block;
+  width: 10rem;
+  text-align: center;
+  color: #ffffff;
+  background-color: #498fd4;
+  border-radius: 1rem;
+  padding: 0.5rem 0rem;
+  border: 1px solid #2e4863;
+  box-shadow: 5px 5px 5px rgba(22, 42, 63, 0.137);
+  margin: auto;
+  margin-top: 1rem;
+}
+
+a.button:hover {
+  color: #2e4863;
+  background-color: #ffffff;
+  border: 1px solid #2e4863;
+}
+
+a.button:active {
+  color: #498fd4;
+  background-color: #ffffff;
+  border: 1px solid #2e4863;
+}
+
+/* ===================================================================== */
+/* ===============================Background============================ */
+
+.first-background {
+  background-color: #363945;
+}
+
+.second-background {
+  background-color: #FFFFFF;
+  padding: 2rem;
+}
+
+.medium-size-image {
+  width: 36rem;
+  margin: 2rem 0rem;
+}
+
+/* ===================================================================== */
+/* ===============================Grid================================== */
+
+/* ===================================================================== */
+/* =============================content================================= */
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  justify-items: center;
+  align-items: center;
+  position: relative;
+
+}
+
+/* ===================================================================== */
+/* =============================row-1=================================== */
+.row-1 {
+  display: grid;
+  grid-row: 1/2;
+  grid-column: 4/-4;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu {
+  display: grid;
+  grid-column: 4/-4;
+  position: absolute;
+  top: -3rem;
+  left: -3rem;
+  border: 3px solid #D2386C;
+  background-color: #D2386C;
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  z-index: 3;
+}
+
+.rotate-menu-open {
+  transform-origin: center;
+  animation: rotate-menu-start 1s forwards;
+}
+
+@keyframes rotate-menu-start {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-90deg);
+  }
+}
+
+.rotate-menu-close {
+  transform-origin: center;
+  animation: rotate-menu-end 1s forwards;
+}
+
+@keyframes rotate-menu-end {
+  from {
+    transform: rotate(-90deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+
+.rotate-content-open {
+  transform-origin: top left;
+  animation: rotate-content-start 1s forwards;
+}
+
+@keyframes rotate-content-start {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-15deg);
+  }
+}
+
+.rotate-content-close {
+  transform-origin: top left;
+  animation: rotate-content-end 1s forwards;
+}
+
+@keyframes rotate-content-end {
+  from {
+    transform: rotate(-15deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.block {
+  z-index: 2;
+}
+
+.link {
+  display: grid;
+  grid-column: 4/-4;
+  position: absolute;
+  top: -3rem;
+  left: -3rem;
+  border: 3px solid transparent;
+  background-color: transparent;
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  z-index: 4;
+}
+
+.sandwitch-menu {
+  width: 2rem;
+  position: absolute;
+  top: 3rem;
+  left: 3.2rem;
+}
+
+.close-menu {
+  width: 2rem;
+  position: absolute;
+  top: 3.1rem;
+  left: 1rem;
+}
+
+
+h1 {
+  display: inline-block;
+  font-family: "Poppins-Bold";
+  font-size: 2rem;
+  text-align: center;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  display: inline-block;
+  font-family: "Poppins-Bold";
+  font-size: 1.5rem;
+  text-align: center;
+  padding-left: 1rem;
+}
+
+p {
+  display: inline-block;
+  font-family: "Poppins-Medium";
+  font-size: 1.2rem;
+}
+
+blockquote {
+  display: inline-block;
+  font-family: "Poppins-Regular";
+  font-size: 1rem;
+  padding-left: 1rem;
+}
+
+span {
+  position: relative;
+}
+
+
+
+/* ===================================================================== */
+/* =============================row-2=================================== */
+.row-2 {
+  display: grid;
+  grid-row: 2/3;
+  grid-column: 4/-4;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.menu-link-parent {
+  display: grid;
+  grid-column: 4/-4;
+  position: absolute;
+  bottom: 4rem;
+  left: 1rem;
+  justify-self: left;
+  width: 20rem;
+  height: 6rem;
+  z-index: 1;
+}
+
+.menu-link-home,
+.menu-link-about,
+.menu-link-contact {
+  display: inline-block;
+  margin: 0rem;
+  padding: 0rem;
+  padding-top: 0.75rem;
+  padding-right: 0.5rem;
+  color: #ffffff;
+  width: 1.5rem;
+  height: 1.5rem;
+
+}
+
+a.menu-link {
+  display: inline-block;
+  font-family: "Poppins-Regular";
+  font-size: 1rem;
+  color: #ffffff;
+  padding-top: 0.75rem;
+}
+
+a.menu-link:hover {
+  color: #D2386C;
+  font-size: 1.1rem;
+}
+
+.menu-link-home {
+  padding-left: 1rem;
+}
+
+.menu-link-about {
+  padding-left: 2rem;
+}
+
+.menu-link-contact {
+  padding-left: 3rem;
+}
+
+.social-media-icons {
+  width: 5rem;
+  max-width: 5rem;
+}
+
+.social-media {
+  display: grid;
+  grid-column: 4/8;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  grid-row: 1/-1;
+}
+
+@media only screen and (max-device-width: 1400px) and (orientation: landscape) {
+
+  @keyframes rotate-content-start {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(-45deg);
+    }
+  }
+
+  @keyframes rotate-content-end {
+    from {
+      transform: rotate(-45deg);
+    }
+
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
+  .menu-link-parent {
+    top: 10rem;
+    left: 1rem;
+  }
+}
